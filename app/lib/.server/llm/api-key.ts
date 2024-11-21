@@ -7,3 +7,7 @@ export function getAPIKey(cloudflareEnv: Env) {
    */
   return env.ANTHROPIC_API_KEY || cloudflareEnv.ANTHROPIC_API_KEY;
 }
+
+export function getBaseURL(cloudflareEnv: Env) {
+  return env.ANTHROPIC_BASE_URL || cloudflareEnv.ANTHROPIC_BASE_URL || 'https://api.anthropic.com/v1';
+}
